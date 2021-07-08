@@ -9,6 +9,10 @@ e.target.style.background = randomColor;
 const getBoxSize = () => {
   let boxSize = prompt("Please enter N for new box size NxN");
   container.textContent = "";
+  if(boxSize>100){
+    alert('Please enter a number less than 100!');
+    return;
+  }
   for(let i = 0; i<(boxSize*boxSize); i++){
     const div = document.createElement('div');
     div.setAttribute('class','blocks')
